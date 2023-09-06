@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hi</h1>
+    <script>
+        let userBirthYear = parseInt(prompt('Введіть ваш рік народження:', ''));
+        if (userBirthYear === null) {
+            alert("Шкода, що Ви не захотіли ввести свій рік народження.")
+        }
+        let userCity = prompt('Введіть ваше місто:', '');
+        if (userCity === null) {
+            alert("Шкода, що Ви не захотіли ввести свіє місто.")
+        }
+        let userFavSport = prompt('Який ваш улюблений вид спроту?', '');
+        if (userCity === null) {
+            alert("Шкода, що Ви не захотіли ввести свій улюблений вид спорту.")
+        } 
+        let mesCity = "";
+        if (userCity==="Київ"||userCity==="Вашингтон"||userCity==="Лондон"){
+            mesCity = `Ти живеш у столиці ${userCity}`;
+        }
+        else {
+            mesCity = `Ти живеш у місті ${userCity}`;
+        }
+        let mesFavSport = "";
+        switch (userFavSport){
+            case "Плавання": mesFavSport = "Круто! Хочеш стати як Дарина Зевіна?"; break;
+            case "Біг": mesFavSport = "Круто! Хочеш стати як Олександр Соколов?"; break;
+            case "Велоспорт": mesFavSport = "Круто! Хочеш стати як Ольга Шекель?"; break;
+            //default: mesFavSport = "Дуже цікавий вид спорту!";
+        }
+        alert(2023-userBirthYear + "\n" + 
+        mesCity + "\n" +
+        mesFavSport);
+    </script>
+</body>
+</html>
